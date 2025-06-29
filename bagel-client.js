@@ -84,7 +84,6 @@ class BagelClient {
             try {
               const data = JSON.parse(line.slice(6));
               if (data.msg === 'done') {
-                console.log(data)
                 done = true;
               }
             } catch (error) {
@@ -268,36 +267,5 @@ class BagelClient {
     }
   }
 }
-/*
-const client = new BagelClient();
 
-async function imageCaptioningExample(imagePath) {
-  try {
-    const prompt =  `Create a caption for this image.  Address all the subjects and elements in the scene, how the character's look and or are dressed, what items are in the image, what action is likely taking place, the mood of the scene and camera position.   Do not mention caption in the output.`;
-    const result = await client.imageCaptioning(imagePath, prompt, {show_thinking:true});
-    return result;
-  } catch (error) {
-    console.error('Error in imageCaptioningExample:', error.message);
-  }
-}
-
-async function captionAllTheThings(){
-  const files = glob.sync(path.join(__dirname, '..', 'public', 'datasets', 'hr-giger', 'images', "*"));
-  const prefix = "HR Giger style."
-  for(const file of files){
-    console.log(file);
-    if(file.indexOf(".txt") !== -1){
-      continue;
-    }
-    let baseFile = file.split("/")[file.split("/").length - 1];
-    let baseName = baseFile.split(".")[0];
-    
-    let captionFile = baseName + ".txt";
-    let {text} = await imageCaptioningExample(file);
-    fs.writeFileSync(path.join(__dirname, '..', 'public', 'datasets', 'hr-giger', 'images', captionFile), prefix + " " + text);
-  }
-}
-
-captionAllTheThings();
-*/
 module.exports = BagelClient;
