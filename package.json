@@ -1,6 +1,6 @@
 {
   "name": "bagel-gradio-client",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Client to access Bytedance's Bagel AI through its gradio interface.",
   "main": "bagel-client.js",
   "scripts": {

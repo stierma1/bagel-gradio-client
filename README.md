@@ -6,6 +6,8 @@ Client to access Bytedance's Bagel AI through its Gradio interface.
 
 `bagel-gradio-client` is a Node.js client that allows you to interact with Bytedance's Bagel AI model through its Gradio interface. This client provides a simple API to perform various operations such as text-to-image generation, image editing, and image captioning.
 
+The Bagel AI model is developed by ByteDance and is available on [GitHub](https://github.com/ByteDance-Seed/Bagel).
+
 ## Features
 
 - Text-to-Image generation
@@ -38,7 +40,7 @@ The client exposes the following methods:
 const client = new BagelClient([baseUrl]);
 ```
 
-- `baseUrl` (optional): The base URL of the Gradio interface. Defaults to `http://localhost:7865`, This can also be set by an environment variable `BAGEL_URL`.
+- `baseUrl` (optional): The base URL of the Gradio interface. Defaults to `http://localhost:7865`. This can also be set by an environment variable `BAGEL_URL`.
 
 ### textToImage(prompt, [options])
 
@@ -174,4 +176,4 @@ const client = new BagelClient('http://your-gradio-url.com');
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the Apache License, Version 2.0. See the [LICENSE](LICENSE) file for details.
